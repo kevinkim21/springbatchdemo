@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: admin
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false #?? ?? ??
+      name: job
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace
